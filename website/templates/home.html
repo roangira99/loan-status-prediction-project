@@ -1,0 +1,41 @@
+<!-- Extending the base template -->
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{% block content %}
+<div class="row" style="margin-top: 50px;">
+  <div class="col-sm-6">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight:700; font-size:large;">Loan Eligibility Check</h5>
+        <p class="card-text" style="margin-top: 20px;">Know your eligibility beforehand</p>
+        <a href="/eligibility" class="btn btn-primary" style="margin-top: 30px; background-color:#7CFC00;">Go</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight:700; font-size:large;">EMI Calculator</h5>
+        <p class="card-text" style="margin-top: 20px;">Easily calculate your loan EMI</p>
+        <a href="/loancalc" class="btn btn-primary" style="margin-top: 30px; background-color:#7CFC00;">Go</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">{{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form> -->
+{% endblock %}
